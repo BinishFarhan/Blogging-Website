@@ -10,7 +10,7 @@ console.log(process.env.PORT , process.env.MONGO_URI)
 
 app.use(express.json())
 app.use(cors())
-// db()
+db()
 
 app.get('/', (req, res) => {
     res.send(new Date().toString())
@@ -20,6 +20,5 @@ app.get('/', (req, res) => {
 app.use('/blog', blogRouter)
 
 app.listen(PORT, async () => {
-    await db()
-    console.log(`Server is running on ${PORT} `)
+        console.log(`Server is running on ${PORT} `)
 })
