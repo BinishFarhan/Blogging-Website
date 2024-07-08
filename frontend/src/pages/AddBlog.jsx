@@ -40,7 +40,7 @@ export default function AddBlog() {
                     imageURL,
 
                 }
-                const resp = await axios.post("http://localhost:8000/blog/add", data)
+                const resp = await axios.post("https://blogging-website-blue-tau.vercel.app/blog/add", data)
 
 
                 setTitle("")

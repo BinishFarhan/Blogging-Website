@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/blog");
+        const response = await axios.get("https://blogging-website-blue-tau.vercel.app/blog");
         setBlog(response.data.data);
         console.log("🚀 ~ fetchData ~ response:", response.data.data)
       } catch (error) {
