@@ -10,9 +10,13 @@ const blogSchema = mongoose.Schema({
     },
     author: {
         type: String,
-        required: true
+        
     },
+    imageURL: {
+        type: String,
+        
+    }
 })
 
-const Blog = mongoose.model('Blog' , blogSchema)
+const Blog = mongoose.model('Blog', blogSchema)
 module.exports = Blog

@@ -8,8 +8,8 @@ async function getBlogs(req, res) {
 
 async function createBlog(req, res) {
     console.log("i am in create Blogs")
-    const { title, desc, author } = req.body
-    const resp = await Blog.create({ title, desc, author })
+    const { title, desc, author, imageURL } = req.body
+    const resp = await Blog.create({ title, desc, author, imageURL })
     console.log(resp)
     res.send({ message: "blogs created" , status: 201 , res: resp })
 };
